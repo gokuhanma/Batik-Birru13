@@ -53,3 +53,63 @@ valueDisplays.forEach((valueDisplay) => {
   }, duration);
 });
 
+// Objek untuk menyimpan link berdasarkan pilihan cabang
+const links = {
+  biologi: {
+    daftar: "https://forms.gle/3ULWft7J7fJLWk2LA",
+    juknis: "xx"
+  },
+  fisika: {
+    daftar: "https://forms.gle/meTLMGcmurUkFdEY8",
+    juknis: "xx"
+  },
+  matematika: {
+    daftar: "https://forms.gle/gycDdMfJaEwLA1vS8",
+    juknis: "xx"
+  },
+  ips: {
+    daftar: "https://forms.gle/pa9T2L5y8gZ6bw7JA",
+    juknis: "xx"
+  },
+  "bahasa-inggris": {
+    daftar: "https://forms.gle/TP6KHqp1eeYZDAQD7",
+    juknis: "xx"
+  }
+};
+
+const dropdown = document.getElementById('cabang-lomba');
+const btnDaftar = document.getElementById('btn-daftar');
+const btnJuknis = document.getElementById('btn-juknis');
+
+// Event listener untuk mengubah link tombol ketika pilihan dropdown berubah
+dropdown.addEventListener('change', function () {
+  const selectedValue = dropdown.value;
+
+  if (links[selectedValue]) {
+    btnDaftar.href = links[selectedValue].daftar;
+    btnJuknis.href = links[selectedValue].juknis;
+  } else {
+    // Jika tidak ada yang dipilih, kembalikan href ke #
+    btnDaftar.href = '#';
+    btnJuknis.href = '#';
+  }
+});
+
+// FAQ
+var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.classList.contains("hidden")) {
+            pannel.classList.remove("hidden");
+          } else {
+            pannel.classList.add("hidden");
+          }
+        });
+      }
