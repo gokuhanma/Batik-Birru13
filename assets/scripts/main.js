@@ -74,7 +74,7 @@ const links = {
   "bahasa-inggris": {
     daftar: "https://forms.gle/TP6KHqp1eeYZDAQD7",
     juknis: "xx"
-  }
+  },
 };
 
 const dropdown = document.getElementById('cabang-lomba');
@@ -113,3 +113,4 @@ var acc = document.getElementsByClassName("accordion");
           }
         });
       }
+
