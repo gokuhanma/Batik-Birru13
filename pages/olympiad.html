@@ -117,46 +117,43 @@
       </section>
 
       <!-- Register -->
-       <section>
-        <div>
-          <div class="container mx-auto px-60 py-8 flex justify-end">
-            <div class="flex flex-row-reverse items-center bg-gray-100 rounded-xl border-2 border-blue-400 hover:border-green-400" style="width: 100%; height: 500px;">
-                <img src="/assets/image/akademiklogo.png" alt="Image Description" class="border" style="width: 400px; height: 400px">
-                <div class="mr-40">
-                    <h3 class="text-3xl font-bold">Birru Olympiad</h3>
-                    <p>Biaya Pendaftaran <strong>75K/orang</strong></p>
-
-                    <!-- Dropdown Menu Lomba -->
-                    <div class="mb-3">
-                      <label for="cabang-lomba" class="block mb-2 text-sm font-medium text-gray-700">Pilih Cabang Lomba</label>
-                      <select id="cabang-lomba" class="w-full p-2.5 border border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:border-blue-500">
-                        <option value="">Pilih Cabang</option>
-                        <option value="biologi">Biologi</option>
-                        <option value="fisika">Fisika</option>
-                        <option value="matematika">Matematika</option>
-                        <option value="ips">IPS</option>
-                        <option value="bahasa-inggris">Bahasa Inggris</option>
-                      </select>
-                    </div>
-
-                    <div class="flex flex-col space-y-4">
-                      <!-- Tombol Daftar -->
-                      <a id="btn-daftar" href="#" class="w-full text-center py-2.5 px-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
-                        Daftar
-                      </a>
-
-                      <!-- Tombol Juknis -->
-                      <a id="btn-juknis" href="#" class="w-full text-center py-2.5 px-4 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
-                        Juknis
-                      </a>
-                    </div>
-                  </div>
-                </div>
+      <section class="min-h-screen flex items-center justify-center">
+        <div class="w-full max-w-4xl mx-auto px-4 py-8">
+          <div class="flex flex-col md:flex-row items-center bg-gray-100 rounded-xl border-2 border-blue-400 hover:border-green-400 w-full">
+            <img src="/assets/image/akademiklogo.png" alt="Image Description" class="w-full md:w-96 h-auto object-cover border md:rounded-l-xl">
+            <div class="px-4 py-6 md:py-8 md:mr-8">
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">Birru Olympiad</h3>
+              <p class="mb-4">Biaya Pendaftaran <strong>75K/orang</strong></p>
+      
+              <!-- Dropdown Menu Lomba -->
+              <div class="mb-3">
+                <label for="cabang-lomba" class="block mb-2 text-sm font-medium text-gray-700">Pilih Cabang Lomba</label>
+                <select id="cabang-lomba" class="w-full p-2.5 border border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:border-blue-500">
+                  <option value="">Pilih Cabang</option>
+                  <option value="biologi">Biologi</option>
+                  <option value="fisika">Fisika</option>
+                  <option value="matematika">Matematika</option>
+                  <option value="ips">IPS</option>
+                  <option value="bahasa-inggris">Bahasa Inggris</option>
+                </select>
+              </div>
+      
+              <div class="flex flex-col space-y-4">
+                <!-- Tombol Daftar -->
+                <a id="btn-daftar" href="#" class="w-full text-center py-2.5 px-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                  Daftar
+                </a>
+      
+                <!-- Tombol Juknis -->
+                <a id="btn-juknis" href="#" class="w-full text-center py-2.5 px-4 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
+                  Juknis
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
+      
       <!-- FAQ -->
       <section>
         <div class="max-w-4xl mx-auto p-8">
@@ -245,31 +242,29 @@
 
       <!-- CP Section -->
       <section>
-        <h1 class="text-3xl font-bold text-center py-6 ">CONTACT PERSON</h1>
-        <div class="flex px-6 py-12 bg-white justify-between">
+        <h1 class="text-3xl font-bold text-center py-6">CONTACT PERSON</h1>
+        <div class="flex flex-col md:flex-row px-6 py-12 bg-white justify-around space-y-6 md:space-y-0 md:space-x-6">
           <!-- Kesekretariatan Section -->
-          <div class="mx-auto bg-white shadow-md flex flex-col justify-center items-center rounded-xl border" style="height: 200px; width: 30%;">
+          <div class="w-full md:w-1/3 bg-white shadow-md flex flex-col justify-center items-center rounded-xl border p-4">
             <h3 class="text-xl font-bold mb-4">Kesekretariatan</h3>
             <div class="flex space-x-4">
-              <!-- Tombol AMMAR -->
               <a id="cp1" href="https://wa.me/6281374567620" class="w-32 px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 text-center">AMMAR</a>
-              <!-- Tombol Baru -->
               <a id="cp2" href="https://wa.me/6281374567620" class="w-32 px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 text-center">AHYANI</a>
             </div>
           </div>
       
-          <!-- Kesekretariatan Section -->
-          <div class="mx-auto bg-white shadow-md flex flex-col justify-center items-center rounded-xl border" style="height: 200px; width: 30%;">
+          <!-- Humas Section -->
+          <div class="w-full md:w-1/3 bg-white shadow-md flex flex-col justify-center items-center rounded-xl border p-4">
             <h3 class="text-xl font-bold mb-4">Humas</h3>
             <div class="flex space-x-4">
-              <!-- Tombol AMMAR -->
               <a id="cp1" href="https://wa.me/6281374567620" class="w-32 px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 text-center">CINDY</a>
-              <!-- Tombol Baru -->
               <a id="cp2" href="https://wa.me/6281374567620" class="w-32 px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 text-center">FATHIYYA</a>
             </div>
           </div>
-          </div>
+        </div>
       </section>
+      
+      
        
 </body>
 
