@@ -9,6 +9,5 @@ save.html
 .DS_Store
 *.log
 *.tmp
-*.bak
 *.json
-
+*.bak
