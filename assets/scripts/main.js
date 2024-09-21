@@ -53,6 +53,39 @@ valueDisplays.forEach((valueDisplay) => {
   }, duration);
 });
 
+// Timeline Lomba
+document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('.timeline-item');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if(entry.isIntersecting){
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+          }
+      });
+  }, { threshold: 0.1 });
+
+  items.forEach(item => {
+      observer.observe(item);
+  });
+});
+
+// Fungsi untuk menambah kelas 'visible' ketika elemen masuk viewport
+function onScroll() {
+  const items = document.querySelectorAll('.timeline-item');
+  items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      item.classList.add('visible');
+    }
+  });
+}
+
+// Event listener untuk scroll
+window.addEventListener('scroll', onScroll);
+
+
 // Objek untuk menyimpan link berdasarkan pilihan cabang
 const links = {
   biologi: {
@@ -114,3 +147,4 @@ var acc = document.getElementsByClassName("accordion");
         });
       }
 
+      
