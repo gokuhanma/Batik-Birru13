@@ -1773,3 +1773,115 @@ video {
     --tw-ring-color: rgb(31 41 55 / 0.7);
   }
 }
+
+/* Custom Bagian timeline*/
+.timeline::before {
+  content: '';
+  position: absolute;
+  background-color: #d1d5db; 
+  z-index: 0; 
+}
+
+@media (min-width: 768px) {
+.timeline::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transform: translateY(-50%);
+}
+
+.timeline-item {
+  width: 1/5; 
+  position: relative;
+  text-align: center;
+  padding-top: 7rem; 
+}
+
+.timeline-item .flex-shrink-0 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.timeline-item .text-container {
+  margin-top: 1rem;
+}
+}
+
+@media (max-width: 767px) {
+.timeline::before {
+  left: 2rem; 
+  top: 0;
+  width: 4px;
+  height: 100%;
+  transform: none;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 6rem;
+  left: -20px;
+  margin-bottom: 2rem;
+}
+
+.timeline-item .flex-shrink-0 {
+  position: absolute;
+  left: 2rem; 
+  top: 0;
+  transform: translateY(20);
+  z-index: 1;
+}
+
+/* Animation Styles */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+/* Animasi zoom untuk number */
+@keyframes zoomOut {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animasi slide in dari kanan untuk teks */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Saat elemen menjadi visible, tambahkan animasi */
+.timeline-item.visible .number {
+  animation: zoomOut 0.6s ease-out forwards;
+}
+
+.timeline-item.visible .text-container {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Awal elemen dalam keadaan tak terlihat */
+.timeline-item .number, .timeline-item .text-container {
+  opacity: 0;
+}
