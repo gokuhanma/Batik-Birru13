@@ -1,39 +1,70 @@
-const menu = document.querySelector('.menu');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
 const hamburgerMenu = document.querySelector('.hamburger-menu');
+const competitionMenu = document.getElementById('competitionMenu');
+const competitionDropdown = document.getElementById('competitionDropdown');
+const sidebarCompetitionMenu = document.getElementById('sidebarCompetitionMenu');
+const sidebarCompetitionDropdown = document.getElementById('sidebarCompetitionDropdown');
 
-hamburgerMenu.addEventListener('click', displayMenu);
-
-function displayMenu() {
-    // Toggle menu visibility
-    menu.classList.toggle('hidden');
-    
-    // Menambahkan styling ketika menu ditampilkan
-    if (!menu.classList.contains('hidden')) {
-        menu.classList.add('absolute', 'top-14', 'w-full', 'left-0', 'bg-blue-900', 'divide-blue-950', 'divide-y-2');
-    } else {
-        // Menghapus styling ketika menu tersembunyi
-        menu.classList.remove('absolute', 'top-14', 'w-full', 'left-0', 'bg-blue-900', 'divide-blue-950', 'divide-y-2');
+    // Fungsi untuk membuka sidebar
+    function openSidebar() {
+      sidebar.classList.remove('translate-x-full');
+      overlay.classList.remove('hidden');
     }
-}
 
-document.getElementById('competitionMenu').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default anchor behavior
-    const dropdown = document.getElementById('competitionDropdown');
-    if (dropdown.classList.contains('hidden')) {
-      dropdown.classList.remove('hidden'); // Show the dropdown
-    } else {
-      dropdown.classList.add('hidden'); // Hide the dropdown
+    // Fungsi untuk menutup sidebar
+    function closeSidebar() {
+      sidebar.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+      // Tutup dropdown yang terbuka di sidebar
+      sidebarCompetitionDropdown.classList.add('hidden');
     }
-  });
 
-  // Click Anywhere to Close
-window.addEventListener('click', function(event) {
-    const dropdown = document.getElementById('competitionDropdown');
-    if (!event.target.matches('#competitionMenu, #competitionMenu *')) {
-      dropdown.classList.add('hidden');
-    }
-  });
+    // Toggle sidebar saat menu hamburger diklik
+    hamburgerMenu.addEventListener('click', function(event) {
+      event.stopPropagation(); // Mencegah propagasi event
+      if (sidebar.classList.contains('translate-x-full')) {
+        openSidebar();
+      } else {
+        closeSidebar();
+      }
+    });
 
+    // Menutup sidebar saat overlay diklik
+    overlay.addEventListener('click', closeSidebar);
+
+    // Mencegah klik di dalam sidebar agar tidak menutup sidebar
+    sidebar.addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+
+    // Toggle dropdown menu di desktop
+    competitionMenu.addEventListener('click', function(event) {
+      event.preventDefault(); // Mencegah perilaku default anchor
+      competitionDropdown.classList.toggle('hidden');
+    });
+
+    // Toggle dropdown menu di sidebar
+    sidebarCompetitionMenu.addEventListener('click', function(event) {
+      event.preventDefault(); // Mencegah perilaku default button
+      sidebarCompetitionDropdown.classList.toggle('hidden');
+    });
+
+    // Klik di mana saja untuk menutup dropdown di desktop
+    window.addEventListener('click', function(event) {
+      // Untuk dropdown desktop
+      if (!event.target.closest('#competitionMenu')) {
+        competitionDropdown.classList.add('hidden');
+      }
+    });
+
+    //Menutup sidebar dengan tombol Esc
+    window.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeSidebar();
+        competitionDropdown.classList.add('hidden');
+      }
+    });
 // Animasi Count dengan Increment yang Berbeda
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 2000; // Durasi total animasi dalam milidetik
