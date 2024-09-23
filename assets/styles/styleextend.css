@@ -1,3 +1,50 @@
+html {
+    scroll-behavior: smooth; /* Mengatur efek smooth scroll untuk seluruh halaman */
+}
+.hero {
+    background-image: url('/assets/image/bgmobile.png'); /* Gambar untuk layar mobile */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+  .hero::after {
+    content: '';
+    background-image: url('/assets/image/logoblur.png');
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    width: 80%;
+    height: 90%; 
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.hero__text {
+    position: relative; /* Konten teks tetap di atas */
+    z-index: 2; /* Pastikan teks terlihat di atas gambar tulisan */
+}
+
+  /* Gambar untuk layar yang lebih besar (tablet, desktop) */
+  @media (min-width: 768px) {
+    .hero {
+      background-image: url('tablet-bg.jpg'); /* Gambar untuk layar tablet */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      background-image: url('/assets/image/justbg.png'); /* Gambar untuk layar desktop */
+    }
+  }
+  @media (max-width: 767px) {
+    .hero::after {
+        display: none; /* Menyembunyikan elemen pada layar mobile */
+    }
+}  
+  
 .timeline::before {
     content: '';
     position: absolute;

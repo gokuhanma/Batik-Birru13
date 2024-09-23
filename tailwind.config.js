@@ -5,6 +5,7 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         lexend: ['Lexend', 'sans-serif'],
+        berkshire: ['Berkshire Swash', 'cursive'],
       },
       colors: {
         'greentheme': '#88ff5a',
