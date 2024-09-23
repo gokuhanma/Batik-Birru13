@@ -119,6 +119,7 @@ window.addEventListener('scroll', onScroll);
 
 // Objek untuk menyimpan link berdasarkan pilihan cabang
 const links = {
+  // Birru Olympiad
   biologi: {
     daftar: "https://forms.gle/3ULWft7J7fJLWk2LA",
     juknis: "xx"
@@ -139,6 +140,7 @@ const links = {
     daftar: "https://forms.gle/TP6KHqp1eeYZDAQD7",
     juknis: "xx"
   },
+  // Birru Art
   solosong :{
     daftar: "https://forms.gle/cUeTJUZVeic5irPD6",
     juknis: ""
@@ -151,10 +153,12 @@ const links = {
     daftar: "https://forms.gle/aXxb76dfWGzCgy8Z9",
     juknis: ""
   },
+  // Birru Scout
   pbb :{
     daftar: "https://forms.gle/ydeVLCzgANNPsHxq5",
     juknis: ""
   },
+  // Birru Linguistic
   storytel :{
     daftar: "https://forms.gle/9o8EEw35BzQxFhX86",
     juknis: ""
@@ -169,6 +173,39 @@ const links = {
   },
   puisi :{
     daftar: "https://forms.gle/WcSYdVuXKfZhiNc97",
+    juknis: ""
+  },
+  // Romansa Birru
+  mtq :{
+    daftar: "https://forms.gle/XCHUW7Rg7WfRQwrz9",
+    juknis: ""
+  },
+  pidatoislami :{
+    daftar: "https://forms.gle/hxv3tE7sZN1juSiEA",
+    juknis: ""
+  },
+  laguislami :{
+    daftar: "https://forms.gle/udW8tniPXHA5YnD56",
+    juknis: ""
+  },
+  tahfizhpa :{
+    daftar: "https://forms.gle/WKYT6gFMbjydPfz16",
+    juknis: ""
+  },
+  tahfizhpi :{
+    daftar: "https://forms.gle/Uh7ZPVUk8T1cgtZL9",
+    juknis: ""
+  },
+  msq :{
+    daftar: "https://forms.gle/D4CurXinUVtvkfTQA",
+    juknis: ""
+  },
+  cerpenislami :{
+    daftar: "https://forms.gle/L43jhdmDMRBns8LA8",
+    juknis: ""
+  },
+  posterislami :{
+    daftar: "https://forms.gle/BwK6Sv34R8grQxLt7",
     juknis: ""
   },
 };
