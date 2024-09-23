@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./index.html', './pages/olympiad.html', './tryit2.html'],
+  content: ['./index.html', './pages/*.{html}'],
   theme: {
     extend: {
       fontFamily: {
