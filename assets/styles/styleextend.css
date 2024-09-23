@@ -9,7 +9,7 @@ html {
   }
   .hero::after {
     content: '';
-    background-image: url('/assets/image/logoblur.png');
+    background-image: url('/assets/image/logoblurfix.png');
     background-size: contain;
     background-position: center;
     position: absolute;
@@ -36,7 +36,7 @@ html {
 
   @media (min-width: 1024px) {
     .hero {
-      background-image: url('/assets/image/justbg.png'); /* Gambar untuk layar desktop */
+      background-image: url('/assets/image/justbg2.png'); /* Gambar untuk layar desktop */
     }
   }
   @media (max-width: 767px) {
