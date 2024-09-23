@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        lexend: ['Lexend', 'sans-serif'],
       },
       colors: {
         'greentheme': '#88ff5a',
