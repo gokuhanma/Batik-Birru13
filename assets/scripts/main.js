@@ -139,6 +139,38 @@ const links = {
     daftar: "https://forms.gle/TP6KHqp1eeYZDAQD7",
     juknis: "xx"
   },
+  solosong :{
+    daftar: "https://forms.gle/cUeTJUZVeic5irPD6",
+    juknis: ""
+  },
+  tarikreasi :{
+    daftar: "https://forms.gle/JXhVi8qj3tMiDW1J8",
+    juknis: ""
+  },
+  desain :{
+    daftar: "https://forms.gle/aXxb76dfWGzCgy8Z9",
+    juknis: ""
+  },
+  pbb :{
+    daftar: "https://forms.gle/ydeVLCzgANNPsHxq5",
+    juknis: ""
+  },
+  storytel :{
+    daftar: "https://forms.gle/9o8EEw35BzQxFhX86",
+    juknis: ""
+  },
+  speech :{
+    daftar: "https://forms.gle/EjX2rtKM1oYnQden6",
+    juknis: ""
+  },
+  cerpen :{
+    daftar: "https://forms.gle/oZTwWWcZuNc3LkoP6",
+    juknis: ""
+  },
+  puisi :{
+    daftar: "https://forms.gle/WcSYdVuXKfZhiNc97",
+    juknis: ""
+  },
 };
 
 const dropdown = document.getElementById('cabang-lomba');
