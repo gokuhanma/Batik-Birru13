@@ -132,7 +132,7 @@ var acc = document.getElementsByClassName("accordion");
             pannel.classList.add("hidden");
           }
         });
-    }
+  }
 // Objek untuk menyimpan link berdasarkan pilihan cabang
 // Link Juknis umum
 const juknisOlym = "https://drive.google.com/drive/folders/1DRqfZMcQgW-ECqQMfZduBYaVQr-rafgB?usp=drive_link";
@@ -192,24 +192,29 @@ const links = {
   },
   cerpen :{
     daftar: "https://forms.gle/oZTwWWcZuNc3LkoP6",
-    juknis: juknisLing
+    juknis: juknisLing,
+    karyaling: "https://forms.gle/HyBbXs8jpfmQPii27"
   },
   puisi :{
     daftar: "https://forms.gle/WcSYdVuXKfZhiNc97",
-    juknis: juknisLing
+    juknis: juknisLing,
+    karyaling: "https://forms.gle/ejjwXjS6XaUTjfxv7"
   },
   // Romansa Birru
   mtq :{
     daftar: "https://forms.gle/XCHUW7Rg7WfRQwrz9",
-    juknis: ""
+    juknis: "",
+    karyarb: "https://forms.gle/Yup2E6aJwefWJRPr9"
   },
   pidatoislami :{
     daftar: "https://forms.gle/hxv3tE7sZN1juSiEA",
-    juknis: ""
+    juknis: "",
+    karyarb: "https://forms.gle/KVRxPbWGqwEd26QEA"
   },
   laguislami :{
     daftar: "https://forms.gle/udW8tniPXHA5YnD56",
-    juknis: ""
+    juknis: "",
+    karyarb: "https://forms.gle/Mwvd27mXmRtMVMqU6"
   },
   tahfizhpa :{
     daftar: "https://forms.gle/WKYT6gFMbjydPfz16",
@@ -221,21 +226,26 @@ const links = {
   },
   msq :{
     daftar: "https://forms.gle/D4CurXinUVtvkfTQA",
-    juknis: ""
+    juknis: "",
+    karyarb: "https://forms.gle/sGftBZCGAk3m21Ti8"
   },
   cerpenislami :{
     daftar: "https://forms.gle/L43jhdmDMRBns8LA8",
-    juknis: ""
+    juknis: "",
+    karyarb: "https://forms.gle/rJyRmZZ8qKs5aoam8"
   },
   posterislami :{
     daftar: "https://forms.gle/BwK6Sv34R8grQxLt7",
-    juknis: ""
+    juknis: "",
+    karyarb: "https://forms.gle/b49LPzdy89g2vvBg8"
   },
 };
 
 const dropdown = document.getElementById('cabang-lomba');
 const btnDaftar = document.getElementById('btn-daftar');
 const btnJuknis = document.getElementById('btn-juknis');
+const btnKaryarb = document.getElementById('btn-karyarb');
+const btnKaryaling = document.getElementById('btn-karyaling');
 
 // Event listener untuk mengubah link tombol ketika pilihan dropdown berubah
 dropdown.addEventListener('change', function () {
@@ -244,10 +254,13 @@ dropdown.addEventListener('change', function () {
   if (links[selectedValue]) {
     btnDaftar.href = links[selectedValue].daftar;
     btnJuknis.href = links[selectedValue].juknis;
+    btnKaryaling.href = links[selectedValue].karyaling;
+    btnKaryarb.href = links[selectedValue].karyarb;
   } else {
     // Jika tidak ada yang dipilih, kembalikan href ke #
     btnDaftar.href = '#';
     btnJuknis.href = '#';
+    btnKaryaling.href = '#';
   }
 });
 

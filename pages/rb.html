@@ -175,43 +175,50 @@
 
         <!-- Register -->
         <section class="min-h-screen flex items-center justify-center">
-          <div class="w-full max-w-4xl mx-auto px-4 py-8">
+          <div class="w-full max-w-4xl mx-auto px-4 py-8"> <!-- Perlebar max-width dari 4xl menjadi 6xl -->
             <div class="flex flex-col md:flex-row items-center bg-gray-100 rounded-xl border-2 border-blue-400 hover:border-green-400 w-full">
               <img src="/assets/image/LOGO_CABANG/Romansa Birru.png" alt="Image Description" class="w-full md:w-96 h-auto object-cover border md:rounded-l-xl max-w-md">
               <div class="px-4 py-6 md:py-8 md:ml-8">
                 <h3 class="text-2xl md:text-3xl font-bold mb-4 font-lexend">Romansa Birru</h3>
-                <p class="mb-4 font-poppins">Biaya Pendaftaran <strong>25K/orang</strong>
-                <br>Khusus Tahfizh <strong>75k/orang</strong></p>
-
+                <p class="mb-4 font-poppins">Biaya Pendaftaran <strong>25K/orang</strong><br>Khusus Tahfizh <strong>75k/orang</strong></p>
+        
                 <!-- Dropdown Menu Lomba -->
                 <div class="mb-3 font-poppins">
                   <label for="cabang-lomba" class="block mb-2 text-sm font-medium text-gray-700">Pilih Cabang Lomba</label>
+                  <span id="error-message" class="text-red-500 text-sm hidden">Silahkan pilih cabang terlebih dahulu!</span>
                   <select id="cabang-lomba" class="w-full p-2.5 border border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:border-blue-500">
-                    <option value="">Pilih Cabang</option>
+                    <option value="pc">Pilih Cabang</option>
                     <option value="mtq">MTQ</option>
                     <option value="pidatoislami">Pidato Islami</option>
                     <option value="laguislami">Lagu Islami</option>
                     <option value="tahfizhpa">Tahfidz (Pa)</option>
-                    <option value="tahfizhpi">Tahfizh (Pi)</option>
+                    <option value="tahfizhpi">Tahfidz (Pi)</option>
                     <option value="msq">MSQ (Online)</option>
                     <option value="cerpenislami">Cerpen Islami(Online)</option>
                     <option value="posterislami">Poster Islami (Online)</option>
                   </select>
                 </div>
-
-                <!-- Tombol Daftar dan Juknis -->
-                <div class="flex flex-col space-y-4 font-poppins">
+        
+                <!-- Tombol Daftar, Juknis dan Twibbon  serta pengumpulan karya-->
+                <div class="grid grid-cols-2 gap-4 font-poppins">
                   <a id="btn-daftar" href="#" class="w-full text-center py-2.5 px-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
                     Daftar
                   </a>
                   <a id="btn-juknis" href="#" class="w-full text-center py-2.5 px-4 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
                     Juknis
                   </a>
+                  <a href="#" class="w-full text-center py-2.5 px-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    Link Twibbon
+                  </a>
+                  <a id="btn-rb" href="#" class="w-full text-center py-2.5 px-4 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                    Pengumpulan Karya
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        
       
           <!-- Section Hadiah -->
           <section class="container mx-auto font-poppins">
