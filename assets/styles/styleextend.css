@@ -1,17 +1,21 @@
 html {
     scroll-behavior: smooth; /* Mengatur efek smooth scroll untuk seluruh halaman */
 }
+
 .hero {
     background-image: url('/assets/image/bgmobile.png'); /* Gambar untuk layar mobile */
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-  }
-  .hero::after {
+    position: relative;
+}
+
+.hero::after {
     content: '';
     background-image: url('/assets/image/logoblurfix.png');
-    background-size: contain;
+    background-size: cover; /* Mengubah contain menjadi cover agar gambar menutupi seluruh area */
     background-position: center;
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
     position: absolute;
     top: 20%;
     left: 50%;
@@ -22,33 +26,35 @@ html {
     opacity: 0.8;
 }
 
-.hero__text {
-    position: relative; /* Konten teks tetap di atas */
-    z-index: 2; /* Pastikan teks terlihat di atas gambar tulisan */
+@media (max-width: 767px) {
+    .hero::after {
+      background-image: url('/assets/image/logoblurfix.png');
+      background-size: contain; /* Menggunakan cover agar gambar menutupi seluruh area di layar kecil */
+      background-repeat: no-repeat; /* Mencegah gambar diulang */
+      width: 100%; /* Sesuaikan ukuran untuk layar kecil */
+      height: 100%; 
+      top: -190px;
+      left: 0;
+      transform: translate(0, 0); /* Sesuaikan posisi untuk menutupi sepenuhnya */
+    }
 }
 
-  /* Gambar untuk layar yang lebih besar (tablet, desktop) */
-  @media (min-width: 768px) {
-    .hero {
-      background-image: url('tablet-bg.jpg'); /* Gambar untuk layar tablet */
-    }
-  }
+.hero__text {
+    position: relative; /* Konten teks tetap di atas */
+    z-index: 2; 
+}
 
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     .hero {
       background-image: url('/assets/image/justbg2.png'); /* Gambar untuk layar desktop */
     }
-  }
-  @media (max-width: 767px) {
-    .hero::after {
-        display: none; /* Menyembunyikan elemen pada layar mobile */
-    }
-}  
-  
+}
+
+  /* garis timeline */
 .timeline::before {
     content: '';
     position: absolute;
-    background-color: #d1d5db; /* Tailwind Gray-300 */
+    background-color: #d1d5db;
     z-index: 0; /* Garis timeline berada di belakang lingkaran */
 }
 
