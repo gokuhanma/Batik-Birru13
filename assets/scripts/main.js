@@ -261,6 +261,7 @@ dropdown.addEventListener('change', function () {
     btnDaftar.href = '#';
     btnJuknis.href = '#';
     btnKaryaling.href = '#';
+    btnKaryarb.href = '#';
   }
 });
 
