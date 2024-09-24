@@ -118,62 +118,69 @@ window.addEventListener('scroll', onScroll);
 
 
 // Objek untuk menyimpan link berdasarkan pilihan cabang
-const links = {
-  // Birru Olympiad
+// Link Juknis umum
+const juknisOlym = "https://drive.google.com/drive/folders/1DRqfZMcQgW-ECqQMfZduBYaVQr-rafgB?usp=drive_link";
+const juknisArt = "https://drive.google.com/drive/folders/1QLgMlBAhjlq2uV5MqIwup3WlmIHu_xN1?usp=drive_link"
+const juknisScout = "https://drive.google.com/drive/folders/1afTQj9qD3Hz-RpBltu7rt9Z8tVo4DksZ?usp=drive_link"
+const juknisLing = "https://drive.google.com/drive/folders/1tZlFAbSMxvEKlQFU6u2R6cF_K4pVwH3V?usp=drive_link"
+const juknisRB = ""
+
+// Birru Olympiad data
+const birruOlympiad = {
   biologi: {
     daftar: "https://forms.gle/3ULWft7J7fJLWk2LA",
-    juknis: "https://drive.google.com/drive/folders/1DRqfZMcQgW-ECqQMfZduBYaVQr-rafgB?usp=drive_link"
+    juknis: juknisOlym 
   },
   fisika: {
     daftar: "https://forms.gle/meTLMGcmurUkFdEY8",
-    juknis: "xx"
+    juknis: juknisOlym 
   },
   matematika: {
     daftar: "https://forms.gle/gycDdMfJaEwLA1vS8",
-    juknis: "xx"
+    juknis: juknisOlym
   },
   ips: {
     daftar: "https://forms.gle/pa9T2L5y8gZ6bw7JA",
-    juknis: "xx"
+    juknis: juknisOlym 
   },
   "bahasa-inggris": {
     daftar: "https://forms.gle/TP6KHqp1eeYZDAQD7",
-    juknis: "xx"
+    juknis: juknisOlym
   },
   // Birru Art
   solosong :{
     daftar: "https://forms.gle/cUeTJUZVeic5irPD6",
-    juknis: ""
+    juknis: juknisArt
   },
   tarikreasi :{
     daftar: "https://forms.gle/JXhVi8qj3tMiDW1J8",
-    juknis: ""
+    juknis: juknisArt
   },
   desain :{
     daftar: "https://forms.gle/aXxb76dfWGzCgy8Z9",
-    juknis: ""
+    juknis: juknisArt
   },
   // Birru Scout
   pbb :{
     daftar: "https://forms.gle/ydeVLCzgANNPsHxq5",
-    juknis: ""
+    juknis: juknisScout
   },
   // Birru Linguistic
   storytel :{
     daftar: "https://forms.gle/9o8EEw35BzQxFhX86",
-    juknis: ""
+    juknis: juknisLing
   },
   speech :{
     daftar: "https://forms.gle/EjX2rtKM1oYnQden6",
-    juknis: ""
+    juknis: juknisLing
   },
   cerpen :{
     daftar: "https://forms.gle/oZTwWWcZuNc3LkoP6",
-    juknis: ""
+    juknis: juknisLing
   },
   puisi :{
     daftar: "https://forms.gle/WcSYdVuXKfZhiNc97",
-    juknis: ""
+    juknis: juknisLing
   },
   // Romansa Birru
   mtq :{
