@@ -126,7 +126,7 @@ const juknisLing = "https://drive.google.com/drive/folders/1tZlFAbSMxvEKlQFU6u2R
 const juknisRB = ""
 
 // Birru Olympiad data
-const birruOlympiad = {
+const links = {
   biologi: {
     daftar: "https://forms.gle/3ULWft7J7fJLWk2LA",
     juknis: juknisOlym 
