@@ -122,7 +122,7 @@ const links = {
   // Birru Olympiad
   biologi: {
     daftar: "https://forms.gle/3ULWft7J7fJLWk2LA",
-    juknis: "xx"
+    juknis: "https://drive.google.com/drive/folders/1DRqfZMcQgW-ECqQMfZduBYaVQr-rafgB?usp=drive_link"
   },
   fisika: {
     daftar: "https://forms.gle/meTLMGcmurUkFdEY8",
