@@ -4,6 +4,7 @@ node_modules/
 # Ignore specific files
 tryit.html
 tryit2.html
+tryit3.html
 save.html
 
 # Other common files to ignore
