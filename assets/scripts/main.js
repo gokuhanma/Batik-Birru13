@@ -116,7 +116,23 @@ function onScroll() {
 // Event listener untuk scroll
 window.addEventListener('scroll', onScroll);
 
+var acc = document.getElementsByClassName("accordion");
+      var i;
 
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.classList.contains("hidden")) {
+            pannel.classList.remove("hidden");
+          } else {
+            pannel.classList.add("hidden");
+          }
+        });
+    }
 // Objek untuk menyimpan link berdasarkan pilihan cabang
 // Link Juknis umum
 const juknisOlym = "https://drive.google.com/drive/folders/1DRqfZMcQgW-ECqQMfZduBYaVQr-rafgB?usp=drive_link";
@@ -235,23 +251,36 @@ dropdown.addEventListener('change', function () {
   }
 });
 
-// FAQ
-var acc = document.getElementsByClassName("accordion");
-      var i;
+// Galeri
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 30,
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true,
+  },
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+  },
+  breakpoints: {
+      0: {
+          slidesPerView: 1,
+      },
+      620: {
+          slidesPerView: 2,
+      },
+      1024: {
+          slidesPerView: 3,
+      },
+  }
+});
 
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          this.parentElement.classList.toggle("active");
-
-          var pannel = this.nextElementSibling;
-
-          if (pannel.classList.contains("hidden")) {
-            pannel.classList.remove("hidden");
-          } else {
-            pannel.classList.add("hidden");
-          }
-        });
-      }
 
       
