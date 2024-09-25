@@ -3,22 +3,31 @@ html {
 }
 
 .hero {
-    background-image: url('/assets/image/bgmobile.png'); /* Gambar untuk layar mobile */
     background-size: cover;
     background-position: center;
     min-height: 100vh;
     position: relative;
 }
-
+.hero__text {
+  position: relative; /* Konten teks tetap di atas */
+  z-index: 2;
+}
 .hero__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none; /* Agar gambar tidak mengganggu klik tombol atau elemen lain */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Agar gambar tidak mengganggu klik tombol atau elemen lain */
 }
 
+.landing-page {
+    background-image: url('/assets/image/bg_mobile_landingpage.png');
+}
+.art {
+    background-image: url('/assets/image/bg_birruart.png');
+}
+
+
 .blur-logo {
-    opacity: 0.8;
     width: 80%; /* Sesuaikan lebar gambar */
     height: auto;
 }
@@ -31,21 +40,32 @@ html {
     }
 }
 
-.hero__text {
-    position: relative; /* Konten teks tetap di atas */
-    z-index: 2;
-}
+
 
 @media (min-width: 1024px) {
-    .hero {
-        background-image: url('/assets/image/resizebg2.png'); /* Gambar untuk layar desktop */
+    .landing-page {
+        background-image: url('/assets/image/bg_landingpage.png'); /* Gambar untuk layar desktop */
     }
-
+    .art {
+      background-image: url('/assets/image/bg_birruart.png');
+    }
     .blur-logo {
         width: 70%; /* Sesuaikan ukuran untuk layar besar */
         margin-top: 100px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Custom Bagian timeline*/
 .timeline::before {
