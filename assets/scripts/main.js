@@ -247,6 +247,46 @@ const btnJuknis = document.getElementById('btn-juknis');
 const btnKaryaerbe = document.getElementById('btn-karyaerbe');
 const btnKaryaling = document.getElementById('btn-karyaling');
 
+dropdown.addEventListener('change', function () {
+  const selectedValue = dropdown.value;
+
+  if (links[selectedValue]) {
+    btnDaftar.href = links[selectedValue].daftar;
+    btnJuknis.href = links[selectedValue].juknis;
+    if (links[selectedValue].karyaling) {
+      btnKaryaling.href = links[selectedValue].karyaling;
+      btnKaryaling.style.display = "block"; // Tampilkan tombol
+    } else {
+      btnKaryaling.href = '#';
+      btnKaryaling.style.display = "none"; // Sembunyikan jika tidak ada URL
+    }
+  } else {
+    btnDaftar.href = '#';
+    btnJuknis.href = '#';
+    btnKaryaling.style.display = "none";
+  }
+});
+
+dropdown.addEventListener('change', function () {
+  const selectedValue = dropdown.value;
+
+  if (links[selectedValue]) {
+    btnDaftar.href = links[selectedValue].daftar;
+    btnJuknis.href = links[selectedValue].juknis;
+    if (links[selectedValue].karyaerbe) {
+      btnKaryaerbe.href = links[selectedValue].karyaerbe;
+      btnKaryaerbe.style.display = "block"; // Tampilkan tombol
+    } else {
+      btnKaryaerbe.href = '#';
+      btnKaryaerbe.style.display = "none"; // Sembunyikan jika tidak ada URL
+    }
+  } else {
+    btnDaftar.href = '#';
+    btnJuknis.href = '#';
+    btnKaryaerbe.style.display = "none";
+  }
+});
+
 // Event listener untuk mengubah link tombol ketika pilihan dropdown berubah
 dropdown.addEventListener('change', function () {
   const selectedValue = dropdown.value;
@@ -264,35 +304,6 @@ dropdown.addEventListener('change', function () {
     btnKaryaling.href = '#';
   }
 });
-
-dropdown.addEventListener('change', function () {
-  const selectedValue = dropdown.value;
-
-  if (links[selectedValue]) {
-    btnDaftar.href = links[selectedValue].daftar;
-    btnJuknis.href = links[selectedValue].juknis;
-    if (links[selectedValue].karyaling) {
-      btnKaryaling.href = links[selectedValue].karyaling;
-      btnKaryaling.style.display = "block"; // Tampilkan tombol
-    } else {
-      btnKaryaling.href = '#';
-      btnKaryaling.style.display = "none"; // Sembunyikan jika tidak ada URL
-    }
-    if (links[selectedValue].karyaerbe) {
-      btnKaryaerbe.href = links[selectedValue].karyaerbe;
-      btnKaryaerbe.style.display = "block"; // Tampilkan tombol
-    } else {
-      btnKaryaerbe.href = '#';
-      btnKaryaerbe.style.display = "none"; // Sembunyikan jika tidak ada URL
-    }
-  } else {
-    btnDaftar.href = '#';
-    btnJuknis.href = '#';
-    btnKaryaling.style.display = "none";
-    btnKaryaerbe.style.display = "none";
-  }
-});
-
 // Galeri
 const swiper = new Swiper('.swiper', {
   loop: true,
