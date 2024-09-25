@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tailwindcss -i ./tailwind.css -o ./assets/styles/style.css --watch"
   },
-  "dependencies": {
-    "tailwindcss": "^3.4.11"
-  },
   "author": "Ihsan Fadhlih Akbar",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
 }
