@@ -189,13 +189,12 @@ html {
     opacity: 0;
   }
 
-  /* Galeri About */
-
-.swiper {
+   /* Swiper Container */
+   .swiper {
     width: 90%;
     max-width: 1200px;
     padding: 40px 0;
-    min-height: 300px; /* Menetapkan tinggi minimum */
+    min-height: 240px; /* Menetapkan tinggi minimum */
 }
 
 /* Swiper Slide */

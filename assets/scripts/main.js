@@ -304,36 +304,3 @@ dropdown.addEventListener('change', function () {
     btnKaryaling.href = '#';
   }
 });
-// Galeri
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 30,
-  pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-  },
-  navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-  },
-  keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-  },
-  breakpoints: {
-      0: {
-          slidesPerView: 1,
-      },
-      620: {
-          slidesPerView: 2,
-      },
-      1024: {
-          slidesPerView: 3,
-      },
-  }
-});
-
-
-      

@@ -20,6 +20,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script defer src="../assets/scripts/main.js" ></script>
     <title>About Batik Birru</title>
 </head>
@@ -100,6 +104,42 @@
         </div>
     </section>
 
+    <!-- Galery -->
+    <section class="mt-6">
+        <!-- Swiper Container -->
+        <div class="swiper">
+            <!-- Swiper Wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <img src="/assets/image/dokum/olim1.JPG" alt="Slide 1" loading="lazy">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <img src="/assets/image/dokum/olim2.JPG" alt="Slide 2" loading="lazy">
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <img src="/assets/image/dokum/olim3.JPG" alt="Slide 3" loading="lazy">
+                </div>
+                <!-- Slide 4 -->
+                <div class="swiper-slide">
+                    <img src="/assets/image/dokum/olim4.JPG" alt="Slide 4" loading="lazy">
+                </div>
+                <!-- Slide 5 -->
+                <div class="swiper-slide">
+                    <img src="/assets/image/dokum/olim5.JPG" alt="Slide 5" loading="lazy">
+                </div>
+            </div>
+    
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+    
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-prev" aria-label="Previous Slide"></div>
+            <div class="swiper-button-next" aria-label="Next Slide"></div>
+        </div>
+    </section>
 
     <!--Meet Our Mascot-->
     <section id="Teaser" class="bg-white py-20">
@@ -203,8 +243,40 @@
           </div>
         </div>
       </div>
-  
       <p class="text-xs text-gray-500 flex justify-center mt-8">&copy; 2024. Batik Birru 13 Created by Ihsan Fadhlih Akbar. All rights reserved.</p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Galeri
+    const swiper = new Swiper('.swiper', {
+          loop: true,
+          grabCursor: true,
+          spaceBetween: 30,
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+              dynamicBullets: true,
+          },
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+          keyboard: {
+              enabled: true,
+              onlyInViewport: true,
+          },
+          breakpoints: {
+              0: {
+                  slidesPerView: 1,
+              },
+              620: {
+                  slidesPerView: 2,
+              },
+              1024: {
+                  slidesPerView: 3,
+              },
+          }
+      });
+  </script>
 </html>
