@@ -25,11 +25,25 @@ html {
 .art {
     background-image: url('/assets/image/bg_birruart.png');
 }
-
+.art {
+  background-image: url('/assets/image/bg_birruart.png');
+}
 
 .blur-logo {
     width: 80%; /* Sesuaikan lebar gambar */
     height: auto;
+}
+
+.blur-logo-scout   {
+  margin-bottom: 200px;
+}
+
+.blur-logo-ling {
+  margin-bottom: 100px;
+}
+
+.blur-logo-rb {
+  margin-bottom: 100px;
 }
 
 @media (max-width: 767px) {
@@ -47,7 +61,19 @@ html {
         background-image: url('/assets/image/bg_landingpage.png'); /* Gambar untuk layar desktop */
     }
     .art {
-      background-image: url('/assets/image/bg_birruart.png');
+      background-image: url('/assets/image/hero/heroart.png');
+    }
+    .olym{
+      background-image: url('/assets/image/hero/heroolym.png');
+    }
+    .scout{
+      background-image: url('/assets/image/hero/heroscout.png');
+    }
+    .ling{
+      background-image: url('/assets/image/hero/heroling.png');
+    }
+    .rb{
+      background-image: url('/assets/image/hero/herorb.png');
     }
     .blur-logo {
         width: 70%; /* Sesuaikan ukuran untuk layar besar */

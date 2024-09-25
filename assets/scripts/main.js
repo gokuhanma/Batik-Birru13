@@ -139,7 +139,7 @@ const juknisOlym = "https://drive.google.com/drive/folders/1DRqfZMcQgW-ECqQMfZdu
 const juknisArt = "https://drive.google.com/drive/folders/1QLgMlBAhjlq2uV5MqIwup3WlmIHu_xN1?usp=drive_link"
 const juknisScout = "https://drive.google.com/drive/folders/1afTQj9qD3Hz-RpBltu7rt9Z8tVo4DksZ?usp=drive_link"
 const juknisLing = "https://drive.google.com/drive/folders/1tZlFAbSMxvEKlQFU6u2R6cF_K4pVwH3V?usp=drive_link"
-const juknisRB = ""
+const juknisRB = "https://drive.google.com/drive/folders/1pdVzMNm3TfnbLZeoNIqyzPEkSgSWUiwY?usp=drive_link"
 
 // Birru Olympiad data
 const links = {
@@ -203,48 +203,48 @@ const links = {
   // Romansa Birru
   mtq :{
     daftar: "https://forms.gle/XCHUW7Rg7WfRQwrz9",
-    juknis: "",
-    karyarb: "https://forms.gle/Yup2E6aJwefWJRPr9"
+    juknis: juknisRB,
+    karyaerbe: "https://forms.gle/Yup2E6aJwefWJRPr9",
   },
   pidatoislami :{
     daftar: "https://forms.gle/hxv3tE7sZN1juSiEA",
-    juknis: "",
-    karyarb: "https://forms.gle/KVRxPbWGqwEd26QEA"
+    juknis: juknisRB,
+    karyaerbe: "https://forms.gle/KVRxPbWGqwEd26QEA"
   },
   laguislami :{
     daftar: "https://forms.gle/udW8tniPXHA5YnD56",
-    juknis: "",
-    karyarb: "https://forms.gle/Mwvd27mXmRtMVMqU6"
+    juknis: juknisRB,
+    karyaerbe: "https://forms.gle/Mwvd27mXmRtMVMqU6"
   },
   tahfizhpa :{
     daftar: "https://forms.gle/WKYT6gFMbjydPfz16",
-    juknis: ""
+    juknis: juknisRB
   },
   tahfizhpi :{
     daftar: "https://forms.gle/Uh7ZPVUk8T1cgtZL9",
-    juknis: ""
+    juknis: juknisRB
   },
   msq :{
     daftar: "https://forms.gle/D4CurXinUVtvkfTQA",
-    juknis: "",
-    karyarb: "https://forms.gle/sGftBZCGAk3m21Ti8"
+    juknis: juknisRB,
+    karyaerbe: "https://forms.gle/sGftBZCGAk3m21Ti8"
   },
   cerpenislami :{
     daftar: "https://forms.gle/L43jhdmDMRBns8LA8",
-    juknis: "",
-    karyarb: "https://forms.gle/rJyRmZZ8qKs5aoam8"
+    juknis: juknisRB,
+    karyaerbe: "https://forms.gle/rJyRmZZ8qKs5aoam8"
   },
   posterislami :{
     daftar: "https://forms.gle/BwK6Sv34R8grQxLt7",
-    juknis: "",
-    karyarb: "https://forms.gle/b49LPzdy89g2vvBg8"
+    juknis: juknisRB,
+    karyaerbe: "https://forms.gle/b49LPzdy89g2vvBg8"
   },
 };
 
 const dropdown = document.getElementById('cabang-lomba');
 const btnDaftar = document.getElementById('btn-daftar');
 const btnJuknis = document.getElementById('btn-juknis');
-const btnKaryarb = document.getElementById('btn-karyarb');
+const btnKaryaerbe = document.getElementById('btn-karyaerbe');
 const btnKaryaling = document.getElementById('btn-karyaling');
 
 // Event listener untuk mengubah link tombol ketika pilihan dropdown berubah
@@ -254,14 +254,42 @@ dropdown.addEventListener('change', function () {
   if (links[selectedValue]) {
     btnDaftar.href = links[selectedValue].daftar;
     btnJuknis.href = links[selectedValue].juknis;
+    btnKaryaerbe.href = links[selectedValue].karyaerbe;
     btnKaryaling.href = links[selectedValue].karyaling;
-    btnKaryarb.href = links[selectedValue].karyarb;
   } else {
     // Jika tidak ada yang dipilih, kembalikan href ke #
     btnDaftar.href = '#';
     btnJuknis.href = '#';
+    btnKaryaerbe.href = '#';
     btnKaryaling.href = '#';
-    btnKaryarb.href = '#';
+  }
+});
+
+dropdown.addEventListener('change', function () {
+  const selectedValue = dropdown.value;
+
+  if (links[selectedValue]) {
+    btnDaftar.href = links[selectedValue].daftar;
+    btnJuknis.href = links[selectedValue].juknis;
+    if (links[selectedValue].karyaling) {
+      btnKaryaling.href = links[selectedValue].karyaling;
+      btnKaryaling.style.display = "block"; // Tampilkan tombol
+    } else {
+      btnKaryaling.href = '#';
+      btnKaryaling.style.display = "none"; // Sembunyikan jika tidak ada URL
+    }
+    if (links[selectedValue].karyaerbe) {
+      btnKaryaerbe.href = links[selectedValue].karyaerbe;
+      btnKaryaerbe.style.display = "block"; // Tampilkan tombol
+    } else {
+      btnKaryaerbe.href = '#';
+      btnKaryaerbe.style.display = "none"; // Sembunyikan jika tidak ada URL
+    }
+  } else {
+    btnDaftar.href = '#';
+    btnJuknis.href = '#';
+    btnKaryaling.style.display = "none";
+    btnKaryaerbe.style.display = "none";
   }
 });
 
