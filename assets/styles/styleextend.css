@@ -1,6 +1,9 @@
 html {
     scroll-behavior: smooth; /* Mengatur efek smooth scroll untuk seluruh halaman */
 }
+header{
+  background-color:#059212;
+}
 
 .hero {
     background-size: cover;
@@ -18,7 +21,7 @@ html {
   align-items: center;
   pointer-events: none; /* Agar gambar tidak mengganggu klik tombol atau elemen lain */
 }
-
+/*
 .landing-page {
     background-image: url('/assets/image/bg_mobile_landingpage.png');
 }
@@ -37,11 +40,14 @@ html {
 .ling {
   background-image: url('/assets/image/hero/bgmob_ling.png');
 }
+.about {
+  background-image: url('/assets/image/hero/bgmoblandingpage.png');
+}
 .blur-logo {
-    width: 80%; /* Sesuaikan lebar gambar */
+    width: 80%; /* Sesuaikan lebar gambar 
     height: auto;
 }
-
+*/
 .blur-logo-scout   {
   margin-bottom: 200px;
 }
@@ -56,7 +62,7 @@ html {
 
 .font-mobolym {
   margin-bottom: 150px; /* Sesuaikan lebar gambar */
-}
+}*/
 
 @media (max-width: 767px) {
     .blur-logo {
@@ -67,8 +73,8 @@ html {
 }
 
 @media (min-width: 1024px) {
-    .landing-page {
-        background-image: url('/assets/image/bg_landingpage.png'); /* Gambar untuk layar desktop */
+    /*.landing-page {
+        background-image: url('/assets/image/bg_landingpage.png'); 
     }
     .art {
       background-image: url('/assets/image/hero/heroart.png');
@@ -85,10 +91,13 @@ html {
     .rb{
       background-image: url('/assets/image/hero/herorb.png');
     }
-    .blur-logo {
-        width: 70%; /* Sesuaikan ukuran untuk layar besar */
-        margin-top: 100px;
+    .about {
+      background-image: url('/assets/image/hero/herolandingpage.png');
     }
+    .blur-logo {
+        width: 70%;
+        margin-top: 100px;
+    } */
 }
 
 /* Custom Bagian timeline*/
@@ -251,3 +260,15 @@ html {
         display: none;
     }
 }
+
+
+
+
+
+
+
+
+/* Base styles for the navbar */
+.navbar {
+  background: linear-gradient(to bottom, #54C392, #D2FF72); /* Revised gradient background */
+} 

@@ -3,26 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/favicon/favicon.ico">
   <link rel="stylesheet" href="../assets/styles/style.css">
   <link rel="stylesheet" href="../assets/styles/styleextend.css"></link>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css"/>
   <title>Batik Birru 13</title>
 </head>
-<body>
+<body class="font-lato">
   <!--Header-->
-  <header class="bg-black sticky top-0 z-50 font-poppins"> 
+  <header class="bg-black sticky top-0 z-50"> 
     <nav class="text-white w-11/12 md:container mx-auto py-4 flex justify-between items-center">
-      <a href="/index.html" class="text-xl font-bold ml-10">Batik Birru</a>
+      <a href="/index.html" class="text-xl font-bold font-berkshire ml-10">Batik Birru</a>
       
       <!-- Menu Desktop -->
-      <ul class="menu md:flex bg-black hidden font-poppins">
+      <ul class="menu md:flex bg-black hidden">
         <li class="hover:text-gray-500 mr-4"> <a href="/index.html">Home</a> </li>
-        <li class="hover:text-gray-500 mr-4"> <a href="/pages/about.html">Tentang</a> </li>
+        <!-- <li class="hover:text-gray-500 mr-4"> <a href="/pages/about.html">Tentang</a> </li> -->
         <li class="relative">
           <a href="#" id="competitionMenu" class="flex items-center hover:text-gray-500">Perlombaan <i class="fa fa-caret-down ml-2"></i></a>
           <ul class="hidden absolute bg-black mt-1 rounded-xl" id="competitionDropdown">
@@ -38,7 +43,7 @@
       <!-- Tombol Kontak untuk Desktop -->
       <ul class="contact hidden md:flex"> 
         <li class="hover:text-gray-500 mr-14"> 
-          <a href="/pages/contact.html" class="border-2 border-green-400 py-2 px-5 rounded-xl hover:bg-green-400 text-white font-poppins">Contact</a> 
+          <a href="#cp" class="border-2 border-green-400 py-2 px-5 rounded-xl hover:bg-green-400 text-white">Contact</a> 
         </li>
       </ul>
       
@@ -50,7 +55,7 @@
   </header>
   
   <!-- Sidebar dan Overlay -->
-  <div id="sidebar" class="fixed top-0 right-0 text-black h-full w-64 bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-40 font-poppins">
+  <div id="sidebar" class="fixed top-0 right-0 text-black h-full w-64 bg-white transform translate-x-full transition-transform duration-300 ease-in-out z-40">
     <nav class="mt-20">
       <ul class="flex flex-col space-y-4">
         <li class="hover:text-gray-500 px-4"><a href="/index.html">Home</a></li>
@@ -65,7 +70,7 @@
             <li class="hover:text-gray-500"><a href="/pages/rb.html">Romansa Birru</a></li>
           </ul>
         </li>
-        <li class="hover:text-gray-500 px-4"><a href="/pages/contact.html">Contact</a></li>
+        <li class="hover:text-gray-500 px-4"><a href="#cp">Contact</a></li>
       </ul>
     </nav>
   </div>
@@ -73,18 +78,22 @@
   <!-- Overlay -->
   <div id="overlay" class="fixed inset-0 bg-black opacity-50 hidden z-30"></div>
 
-    <!--Hero-->
-    <section class="hero rb">
-      <div class="hero__image absolute inset-0 z-0 flex justify-center">
-        <img src="/assets/image/hero/fontrb.png" alt="Blur Logo" class="blur-logo blur-logo-rb">
+    <!-- hero -->
+  <section class="bg-blue-900">
+    <div class="container mx-auto text-center text-white h-screen flex items-center">
+      <div class=" mx-auto w-2/4">
+        <h3 class="text-7xl font-bold font-berkshire text-center">Romansa Birru</h3>
+      </div>
     </div>
+  </section>
+
     </section>
 
     <!-- About and Galery -->
     <section>
       <div class="py-12">
-        <h1 class="text-4xl xl:text-6xl font-bold mb-6 text-center py-8 font-lexend ">About Romansa Birru</h1>
-        <p class="text-center mx-auto px-6 font-poppins" style="max-width: 900px;">Romansa Birru ialah ajang pengujian kemampuan sobat birru dalam lingkup agama islam. Ada banyak cabang lomba yang sobat birru bisa ikutin.
+        <h1 class="text-4xl xl:text-5xl font-bold mb-6 text-center py-8 font-berkshire ">About Romansa Birru</h1>
+        <p class="text-center mx-auto px-6 font-lato" style="max-width: 900px;">Romansa Birru ialah ajang pengujian kemampuan sobat birru dalam lingkup agama islam. Ada banyak cabang lomba yang sobat birru bisa ikutin.
           <br>Nahh, tunggu apalagi buruan daftar sobat birru!</p>
       </div>
     </section>
@@ -92,9 +101,9 @@
      <!-- Timeline -->
       <section>
         <div class="container mx-auto">
-          <h1 class="text-3xl font-bold text-center mb-8 font-lexend">TIMELINE ROMANSA BIRRU</h1>
+          <h1 class="text-3xl font-bold text-center mb-8 font-berkshire">Timeline Romansa Birru</h1>
           
-          <div class="relative timeline flex flex-col md:flex-row md:justify-between font-poppins">
+          <div class="relative timeline flex flex-col md:flex-row md:justify-between font-lato">
             <!-- Timeline Item 1 -->
             <div class="timeline-item w-full md:w-1/5 mb-8 md:mb-0">
               <div class="flex items-center md:flex-col">
@@ -177,11 +186,11 @@
             <div class="flex flex-col md:flex-row items-center bg-gray-100 rounded-xl border-2 border-blue-400 hover:border-green-400 w-full">
               <img src="/assets/image/LOGO_CABANG/Romansa Birru.png" alt="Image Description" class="w-full md:w-96 h-auto object-cover border md:rounded-l-xl max-w-md">
               <div class="px-4 py-6 md:py-8 md:ml-8">
-                <h3 class="text-2xl md:text-3xl font-bold mb-4 font-lexend">Romansa Birru</h3>
-                <p class="mb-4 font-poppins">Biaya Pendaftaran <strong>25K/orang</strong><br>Khusus Tahfizh <strong>75k/orang</strong></p>
+                <h3 class="text-2xl md:text-3xl font-bold mb-4 font-berkshire">Romansa Birru</h3>
+                <p class="mb-4 font-lato">Biaya Pendaftaran <strong>25K/orang</strong><br>Khusus Tahfizh <strong>75k/orang</strong></p>
         
                 <!-- Dropdown Menu Lomba -->
-                <div class="mb-3 font-poppins">
+                <div class="mb-3 font-lato">
                   <label for="cabang-lomba" class="block mb-2 text-sm font-medium text-gray-700">Pilih Cabang Lomba</label>
                   <span id="error-message" class="text-red-500 text-sm hidden">Silahkan pilih cabang terlebih dahulu!</span>
                   <select id="cabang-lomba" class="w-full p-2.5 border border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:border-blue-500">
@@ -198,17 +207,17 @@
                 </div>
         
                 <!-- Tombol Daftar, Juknis dan Twibbon  serta pengumpulan karya-->
-                <div class="grid grid-cols-2 gap-4 font-poppins">
+                <div class="grid grid-cols-2 gap-4 font-lato">
                   <a id="btn-daftar" href="#" class="w-full text-center py-2.5 px-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
                     Daftar
                   </a>
                   <a id="btn-juknis" href="#" class="w-full text-center py-2.5 px-4 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
                     Juknis
                   </a>
-                  <a id="btn-karyaerbe" href="#" class="w-full text-center py-2.5 px-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                  <a id="btn-karyaerbe" href="#" class="w-full text-center py-2.5 px-4 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
                     Pengumpulan Karya
                   </a>
-                  <a href="#" class="w-full text-center py-5 px-4 text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                  <a id="btn-twibbon" href="#" class="w-full text-center py-5 px-4 text-white bg-green-600 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300">
                     Link Twibbon
                   </a>
                 </div>
@@ -218,9 +227,9 @@
         </section>
         
           <!-- Section Hadiah -->
-          <section class="container mx-auto font-poppins">
+          <section class="container mx-auto font-lato">
             <div class="px-12">
-            <h1 class="text-4xl font-bold flex justify-center py-8 sm:text-6xl font-lexend">Hadiah Romansa Birru</h1>
+            <h1 class="text-4xl font-bold flex justify-center py-8 sm:text-6xl font-berkshire">Hadiah Romansa Birru</h1>
             <!-- Box 1, Box 2, dan Box 3 -->
             <div class="flex flex-col md:flex-row gap-4">
                 <!-- Box 1 -->
@@ -246,7 +255,7 @@
           </div>
           <!-- Tahfizh -->
           <div class="px-12">
-            <h1 class="text-4xl font-bold flex justify-center py-8 sm:text-6xl font-lexend">Hadiah Lomba Tahfizh</h1>
+            <h1 class="text-4xl font-bold flex justify-center py-8 sm:text-6xl font-berkshire">Hadiah Lomba Tahfizh</h1>
             <!-- Box 1, Box 2, dan Box 3 -->
             <div class="flex flex-col md:flex-row gap-4">
                 <!-- Box 1 -->
@@ -276,7 +285,7 @@
       <!-- FAQ -->
       <section>
         <div class="max-w-4xl mx-auto p-8">
-          <h1 class="text-center text-3xl font-bold tracking-widest mb-8">
+          <h1 class="text-center text-3xl font-bold font-berkshire tracking-widest mb-8">
             Pertanyaan yang sering ditanyakan
           </h1>
     
@@ -349,7 +358,7 @@
 
     <!-- CP Section -->
     <section class="mb-4">
-      <h1 class="text-3xl font-bold text-center py-6">CONTACT PERSON</h1>
+      <h1 class="text-3xl font-bold font-berkshire text-center py-6 ">Contact Person</h1>
       <div class="flex flex-col lg:flex-row lg:space-x-6 lg:space-y-0 space-y-6 px-6 bg-white justify-evenly items-center">
         <!-- Kesekretariatan Section -->
         <div class="w-80 h-48 lg:w-1/3 bg-white shadow-md flex flex-col justify-evenly items-center rounded-xl border p-4 ">
@@ -372,60 +381,61 @@
     </section>
 </body>
 
-<!-- Footer -->
-<footer class="bg-black">
-  <div class="mx-auto max-w-screen-xl px-6 py-16 sm:px-6 lg:px-8">
-    <div class="text-teal-600 flex justify-start">
-      <img src="/assets/image/Logobb13_crop.png" alt="BB13" class="h-16">
-    </div>
-
-    <div class="flex flex-col lg:flex-row justify-between items-start">
-      <div class="lg:w-1/2 text-white">
-        <p class="mt-4 max-w-xs">
-          SMAN 1 Padang Panjang <br>Jl. Kh. Ahmad Dahlan No.09, Guguk Malintang, Kec. Padang Panjang Tim., Kota Padang Panjang, Sumatera Barat 27128
-        </p>
+  <!-- Footer -->
+  <footer class="bg-black">
+    <div class="mx-auto max-w-screen-xl px-6 py-16 sm:px-6 lg:px-8">
+      <div class="text-blue-500 flex justify-start">
+        <!-- <img src="/assets/image/Logobb13_crop.png" alt="BB13" class="h-16"> -->
+        <h1 class="font-berkshire font-semibold text-2xl tracking-wider">Batik Birru</h1>
       </div>
-
-      <!-- Perlombaan dan Kontak Kami -->
-      <div class="lg:w-1/2 lg:px-4 text-white">
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
-          <div>
-            <p class="font-medium">Perlombaan</p>
-            <ul class="mt-6 space-y-4 text-sm">
-              <li>
-                <a href="pages/olympiad.html" class="text-gray-300 transition hover:opacity-75"> Birru Olympiad </a>
-              </li>
-              <li>
-                <a href="pages/art.html" class="text-gray-300 transition hover:opacity-75"> Birru Art</a>
-              </li>
-              <li>
-                <a href="pages/scout.html" class="text-gray-300 transition hover:opacity-75"> Birru Scout</a>
-              </li>
-              <li>
-                <a href="pages/linguistic.html" class="text-gray-300 transition hover:opacity-75"> Birru Linguistic </a>
-              </li>
-              <li>
-                <a href="pages/rb.html" class="text-gray-300 transition hover:opacity-75"> Romansa Birru </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <p class="font-medium">Kontak Kami</p>
-            <ul class="mt-6 space-y-4 text-sm">
-              <li>
-                <a href="#" class="text-gray-300 transition hover:opacity-75"> Contact </a>
-              </li>
-              <!-- Tambahkan link kontak lainnya di sini jika perlu -->
-            </ul>
+  
+      <div class="flex flex-col lg:flex-row justify-between items-start">
+        <div class="lg:w-1/2 text-white">
+          <p class="mt-4 max-w-xs">
+            SMAN 1 Padang Panjang <br>Jl. Kh. Ahmad Dahlan No.09, Guguk Malintang, Kec. Padang Panjang Tim., Kota Padang Panjang, Sumatera Barat 27128
+          </p>
+        </div>
+  
+        <!-- Perlombaan dan Kontak Kami -->
+        <div class="lg:w-1/2 lg:px-4 text-white">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <div>
+              <p class="font-medium">Perlombaan</p>
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="pages/olympiad.html" class="text-gray-300 transition hover:opacity-75"> Birru Olympiad </a>
+                </li>
+                <li>
+                  <a href="pages/art.html" class="text-gray-300 transition hover:opacity-75"> Birru Art</a>
+                </li>
+                <li>
+                  <a href="pages/scout.html" class="text-gray-300 transition hover:opacity-75"> Birru Scout</a>
+                </li>
+                <li>
+                  <a href="pages/linguistic.html" class="text-gray-300 transition hover:opacity-75"> Birru Linguistic </a>
+                </li>
+                <li>
+                  <a href="pages/rb.html" class="text-gray-300 transition hover:opacity-75"> Romansa Birru </a>
+                </li>
+              </ul>
+            </div>
+  
+            <div>
+              <p class="font-medium">Kontak Kami</p>
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-300 transition hover:opacity-75"> Contact </a>
+                </li>
+                <!-- Tambahkan link kontak lainnya di sini jika perlu -->
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+  
+      <p class="text-xs text-gray-500 flex justify-center mt-8">&copy; 2024. Batik Birru 13. All rights reserved.</p>
     </div>
-
-    <p class="text-xs text-gray-500 flex justify-center mt-8">&copy; 2024. Batik Birru 13 Created by Ihsan Fadhlih Akbar. All rights reserved.</p>
-  </div>
-</footer>
+  </footer>
 
 <script src="../assets/scripts/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
