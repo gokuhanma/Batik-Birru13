@@ -140,6 +140,7 @@ const juknisArt = "https://drive.google.com/drive/folders/1QLgMlBAhjlq2uV5MqIwup
 const juknisScout = "https://drive.google.com/drive/folders/1afTQj9qD3Hz-RpBltu7rt9Z8tVo4DksZ?usp=drive_link"
 const juknisLing = "https://drive.google.com/drive/folders/1tZlFAbSMxvEKlQFU6u2R6cF_K4pVwH3V?usp=drive_link"
 const juknisRB = "https://drive.google.com/drive/folders/1pdVzMNm3TfnbLZeoNIqyzPEkSgSWUiwY?usp=drive_link"
+const linktwibbon = "https://drive.google.com/drive/folders/1kICU5cfuMLb7QRASbGzql5nGMK5uc7j8?usp=sharing"
 
 // Birru Olympiad data
 const links = {
@@ -184,7 +185,7 @@ const links = {
   // Birru Linguistic
   storytel :{
     daftar: "https://forms.gle/9o8EEw35BzQxFhX86",
-    juknis: juknisLing
+    juknis: juknisLing 
   },
   speech :{
     daftar: "https://forms.gle/EjX2rtKM1oYnQden6",
@@ -205,16 +206,19 @@ const links = {
     daftar: "https://forms.gle/XCHUW7Rg7WfRQwrz9",
     juknis: juknisRB,
     karyaerbe: "https://forms.gle/Yup2E6aJwefWJRPr9",
+    twibbon: linktwibbon
   },
   pidatoislami :{
     daftar: "https://forms.gle/hxv3tE7sZN1juSiEA",
     juknis: juknisRB,
-    karyaerbe: "https://forms.gle/KVRxPbWGqwEd26QEA"
+    karyaerbe: "https://forms.gle/KVRxPbWGqwEd26QEA",
+    twibbon: linktwibbon
   },
   laguislami :{
     daftar: "https://forms.gle/udW8tniPXHA5YnD56",
     juknis: juknisRB,
-    karyaerbe: "https://forms.gle/Mwvd27mXmRtMVMqU6"
+    karyaerbe: "https://forms.gle/Mwvd27mXmRtMVMqU6",
+    twibbon: linktwibbon
   },
   tahfizhpa :{
     daftar: "https://forms.gle/WKYT6gFMbjydPfz16",
@@ -227,17 +231,20 @@ const links = {
   msq :{
     daftar: "https://forms.gle/D4CurXinUVtvkfTQA",
     juknis: juknisRB,
-    karyaerbe: "https://forms.gle/sGftBZCGAk3m21Ti8"
+    karyaerbe: "https://forms.gle/sGftBZCGAk3m21Ti8",
+    twibbon: linktwibbon
   },
   cerpenislami :{
     daftar: "https://forms.gle/L43jhdmDMRBns8LA8",
     juknis: juknisRB,
-    karyaerbe: "https://forms.gle/rJyRmZZ8qKs5aoam8"
+    karyaerbe: "https://forms.gle/rJyRmZZ8qKs5aoam8",
+    twibbon: linktwibbon
   },
   posterislami :{
     daftar: "https://forms.gle/BwK6Sv34R8grQxLt7",
     juknis: juknisRB,
-    karyaerbe: "https://forms.gle/b49LPzdy89g2vvBg8"
+    karyaerbe: "https://forms.gle/b49LPzdy89g2vvBg8",
+    twibbon: linktwibbon
   },
 };
 
@@ -246,6 +253,7 @@ const btnDaftar = document.getElementById('btn-daftar');
 const btnJuknis = document.getElementById('btn-juknis');
 const btnKaryaerbe = document.getElementById('btn-karyaerbe');
 const btnKaryaling = document.getElementById('btn-karyaling');
+const btnTwibbon = document.getElementById('btn-twibbon');
 
 dropdown.addEventListener('change', function () {
   const selectedValue = dropdown.value;
@@ -273,12 +281,17 @@ dropdown.addEventListener('change', function () {
   if (links[selectedValue]) {
     btnDaftar.href = links[selectedValue].daftar;
     btnJuknis.href = links[selectedValue].juknis;
+    btnTwibbon.href = links[selectedValue].twibbon
     if (links[selectedValue].karyaerbe) {
       btnKaryaerbe.href = links[selectedValue].karyaerbe;
+      btnTwibbon = links[selectedValue].twibbon
       btnKaryaerbe.style.display = "block"; // Tampilkan tombol
+      btnTwibbon.style.display = "block";
     } else {
       btnKaryaerbe.href = '#';
+      btnTwibbon.href = '#';
       btnKaryaerbe.style.display = "none"; // Sembunyikan jika tidak ada URL
+      btnTwibbon.style.display = "none";
     }
   } else {
     btnDaftar.href = '#';
@@ -295,6 +308,7 @@ dropdown.addEventListener('change', function () {
     btnDaftar.href = links[selectedValue].daftar;
     btnJuknis.href = links[selectedValue].juknis;
     btnKaryaerbe.href = links[selectedValue].karyaerbe;
+    btnTwibbon.href = links[selectedValue].twibbon;
     btnKaryaling.href = links[selectedValue].karyaling;
   } else {
     // Jika tidak ada yang dipilih, kembalikan href ke #
@@ -302,5 +316,6 @@ dropdown.addEventListener('change', function () {
     btnJuknis.href = '#';
     btnKaryaerbe.href = '#';
     btnKaryaling.href = '#';
+    btnTwibbon.href = '#';
   }
 });
