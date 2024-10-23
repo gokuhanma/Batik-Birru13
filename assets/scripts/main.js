@@ -261,11 +261,11 @@ dropdown.addEventListener('change', function () {
   if (links[selectedValue]) {
     btnDaftar.href = links[selectedValue].daftar;
     btnJuknis.href = links[selectedValue].juknis;
+    btnKaryaling.href = links[selectedValue].karyaling;
+    
     if (links[selectedValue].karyaling) {
-      btnKaryaling.href = links[selectedValue].karyaling;
       btnKaryaling.style.display = "block"; // Tampilkan tombol
     } else {
-      btnKaryaling.href = '#';
       btnKaryaling.style.display = "none"; // Sembunyikan jika tidak ada URL
     }
   } else {
@@ -279,12 +279,14 @@ dropdown.addEventListener('change', function () {
   const selectedValue = dropdown.value;
 
   if (links[selectedValue]) {
+
     btnDaftar.href = links[selectedValue].daftar;
     btnJuknis.href = links[selectedValue].juknis;
     btnTwibbon.href = links[selectedValue].twibbon
+    
     if (links[selectedValue].karyaerbe) {
       btnKaryaerbe.href = links[selectedValue].karyaerbe;
-      btnTwibbon = links[selectedValue].twibbon
+      btnTwibbon.href = links[selectedValue].twibbon
       btnKaryaerbe.style.display = "block"; // Tampilkan tombol
       btnTwibbon.style.display = "block";
     } else {
@@ -301,21 +303,21 @@ dropdown.addEventListener('change', function () {
 });
 
 // Event listener untuk mengubah link tombol ketika pilihan dropdown berubah
-dropdown.addEventListener('change', function () {
-  const selectedValue = dropdown.value;
+// dropdown.addEventListener('change', function () {
+//   const selectedValue = dropdown.value;
 
-  if (links[selectedValue]) {
-    btnDaftar.href = links[selectedValue].daftar;
-    btnJuknis.href = links[selectedValue].juknis;
-    btnKaryaerbe.href = links[selectedValue].karyaerbe;
-    btnTwibbon.href = links[selectedValue].twibbon;
-    btnKaryaling.href = links[selectedValue].karyaling;
-  } else {
-    // Jika tidak ada yang dipilih, kembalikan href ke #
-    btnDaftar.href = '#';
-    btnJuknis.href = '#';
-    btnKaryaerbe.href = '#';
-    btnKaryaling.href = '#';
-    btnTwibbon.href = '#';
-  }
-});
+//   if (links[selectedValue]) {
+//     btnDaftar.href = links[selectedValue].daftar;
+//     btnJuknis.href = links[selectedValue].juknis;
+//     btnKaryaerbe.href = links[selectedValue].karyaerbe;
+//     btnKaryaling.href = links[selectedValue].karyaling;
+//     btnTwibbon.href = links[selectedValue].twibbon;
+//   } else {
+//     // Jika tidak ada yang dipilih, kembalikan href ke #
+//     btnDaftar.href = '#';
+//     btnJuknis.href = '#';
+//     btnKaryaerbe.href = '#';
+//     btnKaryaling.href = '#';
+//     btnTwibbon.href = '#';
+//   }
+// });
