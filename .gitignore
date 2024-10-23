@@ -9,7 +9,7 @@ save.html
 galery.html
 tailwind.config.js
 pages/about.html
-assets/image/hero
+assets/image/hero/*
 
 # Other common files to ignore
 .DS_Store
