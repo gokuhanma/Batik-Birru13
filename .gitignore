@@ -1,5 +1,8 @@
 # Ignore node_modules folder
 node_modules/
+assets/image/hero/
+assets/image/LOGO_BIDANG_BB
+assets/image/dokum
 
 # Ignore specific files
 tryit.html
@@ -9,7 +12,6 @@ save.html
 galery.html
 tailwind.config.js
 pages/about.html
-assets/image/hero/*
 
 # Other common files to ignore
 .DS_Store

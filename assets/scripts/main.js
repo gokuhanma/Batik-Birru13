@@ -302,6 +302,56 @@ dropdown.addEventListener('change', function () {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Mendapatkan referensi ke elemen-elemen
+  const btnDaftar = document.getElementById('btn-daftar');
+  const btnJuknis = document.getElementById('btn-juknis');
+  const cabangLomba = document.getElementById('cabang-lomba');
+  const btnKaryaerbe = document.getElementById('btn-karyaerbe');
+  const btnTwibbon = document.getElementById('btn-twibbon');
+  const btnKaryaling = document.getElementById('btn-karyaling');
+  const dropdownContainer = document.getElementById('dropdown-container');
+
+  // Membuat elemen pesan kesalahan
+  const errorMessage = document.createElement('p');
+  errorMessage.id = 'error-message';
+  errorMessage.style.color = 'red';
+  errorMessage.textContent = 'Pilih cabang lomba terlebih dahulu!';
+
+  // Fungsi validasi
+  function validateSelection(event) {
+    if (!cabangLomba.value) {
+      event.preventDefault(); // Mencegah aksi default jika diperlukan
+      // Periksa apakah pesan kesalahan sudah ditampilkan
+      if (!document.getElementById('error-message')) {
+        // Sisipkan pesan kesalahan di atas dropdown
+        dropdownContainer.insertBefore(errorMessage, dropdownContainer.firstChild);
+      }
+    } else {
+      // Hapus pesan kesalahan jika ada
+      if (document.getElementById('error-message')) {
+        dropdownContainer.removeChild(errorMessage);
+      }
+      // Lanjutkan dengan aksi default atau pengiriman form
+    }
+  }
+
+  // Menambahkan event listener ke tombol "Daftar" dan "Juknis"
+  btnDaftar.addEventListener('click', validateSelection);
+  btnJuknis.addEventListener('click', validateSelection);
+  btnKaryaerbe.addEventListener('click', validateSelection);
+  btnTwibbon.addEventListener('click', validateSelection);
+  btnKaryaling.addEventListener('click', validateSelection); 
+  
+  // Opsional: Hapus pesan kesalahan ketika pilihan berubah
+  cabangLomba.addEventListener('change', function() {
+    if (cabangLomba.value && document.getElementById('error-message')) {
+      dropdownContainer.removeChild(errorMessage);
+    }
+  });
+});
+
+
 // Event listener untuk mengubah link tombol ketika pilihan dropdown berubah
 // dropdown.addEventListener('change', function () {
 //   const selectedValue = dropdown.value;
