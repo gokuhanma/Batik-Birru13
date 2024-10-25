@@ -350,24 +350,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-
-// Event listener untuk mengubah link tombol ketika pilihan dropdown berubah
-// dropdown.addEventListener('change', function () {
-//   const selectedValue = dropdown.value;
-
-//   if (links[selectedValue]) {
-//     btnDaftar.href = links[selectedValue].daftar;
-//     btnJuknis.href = links[selectedValue].juknis;
-//     btnKaryaerbe.href = links[selectedValue].karyaerbe;
-//     btnKaryaling.href = links[selectedValue].karyaling;
-//     btnTwibbon.href = links[selectedValue].twibbon;
-//   } else {
-//     // Jika tidak ada yang dipilih, kembalikan href ke #
-//     btnDaftar.href = '#';
-//     btnJuknis.href = '#';
-//     btnKaryaerbe.href = '#';
-//     btnKaryaling.href = '#';
-//     btnTwibbon.href = '#';
-//   }
-// });
