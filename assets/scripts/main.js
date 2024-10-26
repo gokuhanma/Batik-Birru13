@@ -349,4 +349,11 @@ document.addEventListener('DOMContentLoaded', function() {
       dropdownContainer.removeChild(errorMessage);
     }
   });
+  
+  //analytics 
+  import('./analytics.js').then(() => {
+    console.log("Vercel Analytics initialized.");
+  }).catch(err => {
+    console.error("Error loading Vercel Analytics:", err);
+  });
 });
