@@ -2,7 +2,6 @@
 node_modules/
 assets/image/hero/
 assets/image/LOGO_BIDANG_BB
-assets/image/dokum
 
 # Ignore specific files
 tryit.html
